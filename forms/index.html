@@ -1,0 +1,95 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Form Controls</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            h1 {
+                padding: 1px;
+                margin: 2px;
+                margin-left: 5px;
+            }
+            table {
+                border-width: 1px;
+                border-color: navy;
+                border-style: solid;
+                padding: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Web Form Controls</h1>
+        <form method="post" action="webform.php">
+            <table>
+                <tr><td>
+                        <label>Name
+                            <input name="name" placeholder="Enter your name"></label>
+                    </td>
+                </tr>
+                <tr><td>
+                        <label>Phone
+                            <input name="phone" type="tel" pattern="[2-9][0-9]{2}-[0-9]{3}-[0-9]{4}" title="Format: XXX-XXX-XXXX"></label>
+                    </td></tr>
+                <tr><td>
+                        <label>URL
+                            <input name="url" type="url" placeholder="http://domain.com"></label>
+                    </td></tr>
+                <tr><td>
+                        <label>Email
+                            <input name="email" type="email" placeholder="user@domain.com" required autofocus></label>
+                    </td></tr>
+                <tr><td>
+                        <label>Range
+                            <input name="range" type="range" min="0" max="100" step="5" value="40"></label>
+
+                    </td></tr>
+                <tr><td>
+                        <label>Number
+                            <input name="number" type="number" min="0" max="100" step="5" value="40"></label>
+                    </td></tr>
+                <tr><td>
+                        <label>Date
+                            <input name="date" type="date"></label>
+                    </td></tr>
+                <tr><td>
+                        <label>Week
+                            <input name="week" type="week"></label>
+                    </td></tr>
+                <tr><td>
+                        <label>Month
+                            <input name="month" type="month"></label>
+                    </td></tr>
+                <tr><td>
+                        <label>Time
+                            <input name="time" type="time"></label>
+                    </td></tr>
+                <tr>
+                    <td><label>Datetime
+                            <input name="datetime" type="datetime"></label>
+                    </td></tr>
+                <tr><td>
+                        <label>Local Datetime
+                            <input name="datetime" type="datetime-local"></label>
+                    </td></tr>
+                <tr>
+                    <td><label>Color
+                            <input name="color" type="color"></label></td>
+                </tr>
+                <tr>
+                    <td><label>Search
+                            <input name="query" type="search"></label></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
