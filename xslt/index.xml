@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl" ?>
+<xsl_samples>
+	<xsl_sample>
+		<title>CD Catalog</title>
+		<base_file>cd_catalog</base_file>
+		<result>cd_catalog.xml</result>
+	</xsl_sample>
+	<xsl_sample>
+		<title>MSDN Books</title>
+		<base_file>msdn_books</base_file>
+		<result>msdn_books.xml</result>
+	</xsl_sample>
+	<xsl_sample>
+		<title>MSDN Books - By Title</title>
+		<base_file>msdn_books_title</base_file>
+		<result>msdn_books.xml</result>
+	</xsl_sample>
+	<xsl_sample>
+		<title>MSDN Books - By Author</title>
+		<base_file>msdn_books_author</base_file>
+		<result>msdn_books.xml</result>
+	</xsl_sample>
+	<xsl_sample>
+		<title>MSDN Books - By Genres</title>
+		<base_file>msdn_books_genre</base_file>
+		<result>msdn_books.xml</result>
+	</xsl_sample>
+</xsl_samples>
