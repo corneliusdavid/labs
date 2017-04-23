@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Example</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function border() {
+                var canvas = document.getElementById('canvas');
+                var ctx = canvas.getContext('2d');
+                
+                ctx.beginPath();
+                ctx.fillStyle = "rgba(200, 200, 200, 0.4)";
+                ctx.fillRect(0, 0, canvas.width-1, canvas.height);
+                ctx.strokeStyle = "rgba(0, 0, 0, 1)";
+                ctx.strokeRect(0, 0, canvas.width-1, canvas.height);
+                
+                ctx.font = "8pt Arial";
+                ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                ctx.fillText("0,0", 0, 9);                
+            }
+            function rectangles() {
+                var canvas = document.getElementById('canvas').getContext('2d');
+                
+                canvas.fillStyle = "rgba(200, 200, 0, 1)";
+                canvas.fillRect(70, 50, 55, 70);
+                
+                canvas.fillStyle = "rgba(200, 0, 0, 1)";
+                canvas.fillRect(90, 50, 75, 50);
+                
+                canvas.fillStyle = "rgba(0, 0, 200, 1)";
+                canvas.fillRect(30, 30, 75, 70);
+            }
+            function triangles() {
+                var canvas = document.getElementById('canvas').getContext('2d');
+                canvas.strokeStyle = "rgba(200, 0, 0, 0.5)";
+                
+                canvas.beginPath();
+                canvas.moveTo(100, 205);
+                canvas.lineTo(100, 125);
+                canvas.lineTo(20, 205);
+                canvas.closePath();
+                canvas.stroke();
+                
+                canvas.beginPath();
+                canvas.moveTo(90, 205);
+                canvas.lineTo(90, 125);
+                canvas.lineTo(10, 205);
+                canvas.closePath();
+                canvas.stroke();
+                
+                canvas.beginPath();
+                canvas.moveTo(110, 205);
+                canvas.lineTo(110, 125);
+                canvas.lineTo(30, 205);
+                canvas.closePath();
+                canvas.stroke();
+                                
+            }
+            function filledTriangle() {
+                var canvas = document.getElementById('canvas').getContext('2d');
+                   
+                canvas.fillStyle = "rgba(50, 50, 200, 0.5)";
+                canvas.beginPath();
+                canvas.moveTo(225, 25);
+                canvas.lineTo(305, 25);
+                canvas.lineTo(225, 105);
+                canvas.closePath();
+                canvas.fill();
+            }
+            function hellotext() {
+                var canvas = document.getElementById('canvas').getContext('2d');
+
+                canvas.fillStyle = "rgba(150, 0, 0, 1)";
+                canvas.font = "40pt Arial Bold";
+                canvas.strokeText("Hello JavaScript!", 50, 300);
+                canvas.fillText("Hello JavaScript!", 50, 400);
+            }
+            function cliptext() {
+                var canvas = document.getElementById('canvas').getContext('2d');
+
+                canvas.fillStyle = "rgba(0, 0, 0, 1)";
+                canvas.save(); // save the context, which is NOT clipped
+                
+                canvas.beginPath();
+                // arc(center-x, center-y, radius, start-arc, end-arc
+                canvas.arc(400, 75, 25, 0, Math.PI * 2);
+                canvas.clip();
+
+                canvas.fillStyle = "rgba(0, 0, 0, .20)";
+                canvas.fill();
+                
+                canvas.fillStyle = "rgba(50, 50, 250, 1)";
+                canvas.font = "50pt Arial";
+                canvas.fillText("H", 375, 100);
+                
+                canvas.restore();  // return to unclipped context with original color
+                
+                canvas.font = "25pt Arial";
+                canvas.fillText("ello JS World!", 420, 95);
+            }
+            function small_circle(x, y) {
+                var canvas = document.getElementById('canvas').getContext('2d');
+
+                canvas.fillStyle = "#f00";
+                canvas.beginPath();
+                canvas.arc(x, y, 10, 0, Math.PI * 2);
+                canvas.fill();
+            }
+            function erase_ball(x, y) {
+                var canvas = document.getElementById('canvas').getContext('2d');
+                canvas.clearRect(x-10, y-10, 20, 20);
+            }
+            var int_id = 0;
+            function animate() {
+                var canvas = document.getElementById('canvas');
+                var ball_x = 50;
+                var ball_y = 50;
+                var delta_x = 3;
+                var delta_y = 2;
+                
+                small_circle(ball_x, ball_y);
+                
+                int_id = setInterval(function() {
+                    if(ball_x > canvas.width-10 || ball_x < 10) {
+                        delta_x *= -1;
+                    }
+                    if(ball_y > canvas.height-10 || ball_y < 10) {
+                        delta_y *= -1;
+                    }
+                    erase_ball(ball_x, ball_y);
+                    ball_x += delta_x;
+                    ball_y += delta_y;
+                    small_circle(ball_x, ball_y);
+                }, 25);
+                
+            }
+
+            function loader()
+            {
+                border();                
+                rectangles();
+                triangles();
+                filledTriangle();
+                hellotext();
+                cliptext();
+            }
+            function load_reset() {
+                clearInterval(int_id);
+                loader();
+            }
+        </script>
+    </head>
+    <body onload="loader();">
+        <h1>Canvas Example</h1>
+        <input type="button" value="Animate" onclick="animate();">
+        <input type="button" value="Reset" onclick="load_reset();">
+        <canvas id="canvas" width="600" height="450"></canvas>
+        
+    </body>
+</html>
