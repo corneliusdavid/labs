@@ -1,0 +1,39 @@
+<!--
+// location: /web/HTML5/InlineEditing/public_html/
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editable Element</title>
+        <script type="text/javascript">
+            function createLink()
+            {
+                var url = prompt("enter URL:", "http://");
+                if(url)
+                    document.execCommand("createlink", false, url);
+            }
+            function showSource()
+            {
+                var content = document.getElementById("div").innerHTML;
+                content.replace(/</g,'&lt;');
+                content.replace(/>/g, '&gt;');
+                alert(content);
+            }
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Editable Element</h1>
+        <div>
+            <input type="button" value="bold" onclick="document.execCommand('bold', false, null);">
+            <input type="button" value="italic" onclick="document.execCommand('italic', false, null);">
+            <input type="button" value="underline" onclick="document.execCommand('underline', false, null);">
+            <input type="button" value="link" onclick="createLink();">
+            <input type="button" value="source" onclick="showSource();">
+        </div>
+        <div id="div" style='border:solid black; height: 300px; width: 400px' contenteditable="true">
+        </div>
+    </body>
+</html>
