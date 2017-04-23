@@ -1,0 +1,19 @@
+body { 
+    font-family: Helvetica; 
+    font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+    margin: 10;	            /* Amount of negative space around the outside of the body */
+    padding: 20;	            /* Amount of negative space around the inside of the body */
+}
+
+#header ul li a {
+    background-color: #FFFFFF;
+    color: #222222;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: -1px;
+    text-decoration: none;
+}
+
+#footer {
+    display: none;
+}
