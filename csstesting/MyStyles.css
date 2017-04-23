@@ -1,0 +1,192 @@
+/*
+    Document   : MyStyles
+    Created on : Apr 18, 2013, 7:53:39 PM
+    Author     : david
+    Description: learn and test CSS styling
+*/
+
+root {
+    display: block;
+}
+
+header {
+    background-color: black;
+    color: yellow;
+    border-width: 4px;
+    border-color: red;
+    border-style: solid;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: x-large;
+}
+
+footer {
+    text-align: right;
+    clear: both;
+}
+
+h1 {
+    color: blue;
+    font-family: fantasy;
+    font-size: xx-large;
+    font-kerning: normal;
+    /* drop shadow params: color, horz, vert, blur */
+    text-shadow: silver -6px 8px 6px;
+}
+
+b {
+    text-decoration: darkblue;
+    font-weight: bolder;
+    text-shadow: yellow 3px 3px 3px;
+    font-variant-caps: all-small-caps;
+}
+
+small {
+    font-size: xx-small;
+}
+
+section {
+    background-color: khaki;
+}
+
+abbr {
+    border-bottom: 1px dotted black;
+}
+
+h3 {
+    font-stretch: expanded;
+    font-weight: bold;
+    font-variant-caps: all-small-caps;
+    text-shadow: 2;
+    color: yellow;
+    background-color: darkslateblue;
+}
+
+ul {
+    float: left;
+}
+
+li {
+    line-height: 35px;
+}
+
+p {
+    width: 300px;
+    font-family: sans-serif;
+    border-color: aquamarine;
+    border-style: ridge;
+    border-width: thin;
+    padding: 10px;
+    outline-color: orangered;
+    outline-offset: 4px;
+    outline-style: solid;
+    outline-width: 4px;
+    margin-left: 20px;
+    background-color: gainsboro;
+}
+
+/* augment the previously defined <p> tag with additional capabilities */
+p.lorem {
+    width: 60%;
+    font-size: small;
+    border-style: none;
+    line-height: .8;
+    text-align: justify;
+    text-indent: 5%;
+    outline: none;
+    background-color: lavenderblush;
+}
+
+/* test positining of the following paragraphs */
+p.relative {
+    clear: left;
+    position: relative;
+    width: 500px;
+    left: 150px;
+    background-color: yellowgreen;
+}
+
+p.absolute {
+    position: absolute;
+    width: 400px;
+    left: 450px;
+    top: 100px;
+    background-color: palegreen;
+    border-top-style: none;
+    border-top-width: 0px;
+    outline-width: 0px;
+    outline-style: none;
+}
+
+p.fixed {
+    position: fixed;
+    width: 300px;
+    left: 550px;
+    top: 0px;
+    outline: none;
+    text-align: center;
+}
+
+p.invisibile {
+    display: none;
+}
+
+span.highlight {
+    background-color: yellow;
+}
+
+figure {
+    padding: 5px;
+    background-color: lightcoral;
+}
+
+figcaption {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 10px;
+}
+
+section.lorem {
+    background-color: gold;
+}
+
+/* this doesn't work? */
+#intro {
+    border-radius: 15%;
+    outline-color: lightyellow;
+    outline-offset: 25px;
+    outline-style: solid;
+    outline-width: 50px;
+}
+
+#caps {
+    font-variant: small-caps;
+}
+
+#monospace {
+    font-family: monospace;
+}
+
+/* doesn't work? */
+#clipped {
+    position: absolute;
+    clip: rect(50px, 100px, 75px, 35px);
+}
+
+/* create the "a" styles in this order because "visited" could override "hover" */
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: turquoise;
+}
+
+/* if the user uses a keyboard, the "focus" pseudo class will be the rule instead of "hover" */
+a:hover, a:focus {
+    text-decoration: underline;
+}
