@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Cornelius Concepts Labs</title>
+	<meta charset="UTF-8">
+	<script src="js/jquery.js"></script>
+	<script src="flot/jquery.flot.js"></script>
+	<script>
+		function graphit() {
+			var gdata = [[0, 3], [4, 8], [8, 5], [9, 13]];
+			var my_graph = $("#my_graph");
+			$.plot(my_graph, [gdata]);
+		}
+	</script>
+</head>
+<body onload="graphit();">
+	<div id="my_graph" style="width: 600px; height: 300px"></div>
+</body>
+</html>
