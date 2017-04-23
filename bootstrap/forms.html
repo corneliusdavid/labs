@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap Tutorial - Panels</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/ ?3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/ ?1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+  </head>
+  <body>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+<div class="container">
+<div class="col-sm-8 col-push-2">
+
+<div class="page-header">
+	<h1>Hello Bootstrap World!<br /><small>Exploring the world of the Bootstrap Javascript framework</small></h1>
+</div>
+
+<ul class="nav nav-pills">
+	<li><a href="columns.html">Columns</a></li>
+	<li><a href="panels.html">Panels</a></li>
+	<li><a href="list.html">List</a></li>
+	<li><a href="blog.html">Blog</a></li>
+	<li><a href="images.html">Images</a></li>
+	<li class="active"><a href="forms.html">Forms</a></li>
+</ul>
+
+<div class="well well-sm">
+	<form class="form-inline">
+		<div class="form-group">
+			<label for="loginName">Login</label>
+			<input type="text" class="form-control" id="loginName" placeholder="Login Name">
+			<input type="password" class="form-control" id="password" placeholder="Password">
+		</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+	<button type="cancel" class="btn">Cancel</button>
+	</form>
+</div>
+
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="nameField" class="col-xs-2">Name</label>
+		<div class="col-xs-4">
+			<input type="text" class="form-control input-lg" id="nameField" placeholder="Your Name" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="phoneField" class="col-xs-2">Phone</label>
+		<div class="col-xs-4">
+			<input type="text" class="form-control" id="phoneField" placeholder="Phone Number" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="emailField" class="col-xs-2">Email</label>
+		<div class="col-xs-10">
+			<input type="email" class="form-control input-sm" id="emailField" placeholder="Email Address" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="noteField" class="col-xs-2">Notes</label>
+		<div class="col-xs-10">
+			<textarea class="form-control" id="notesField" placeholder="Notes"></textarea>
+		</div>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox">Isn't this cool?
+		</label>
+	</div>
+
+</form>
+
+</div>
+</div>
+</body>
+</html>
